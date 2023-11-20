@@ -14,6 +14,12 @@ const encodeMessage = (str) => {
   
   const decodeMessage = (str) => {
     // Use the encryptor functions here.
+    let fifth = caesarCipher(str, -11);
+    let fourth = reverseCipher(fifth);
+    let third = caesarCipher(fourth, -13);
+    let second = symbolCipher(third);
+    let first = caesarCipher(second, -13);
+    return first
   }
   
   // User input / output.
